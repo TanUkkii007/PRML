@@ -30,7 +30,7 @@ class PolynomialFeatures(object):
         """
         assert isinstance(degree, int)
         self.degree = degree
-    
+
     def transform(self, x):
         """
         transforms input array with polynomial features

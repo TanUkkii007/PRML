@@ -26,7 +26,7 @@ class GaussianFeatures(object):
         assert isinstance(var, float) or isinstance(var, int)
         self.mean = mean
         self.var = var
-    
+
     def _gauss(self, x, mean):
         return np.exp(-0.5 * np.sum(np.square(x - mean), axis=-1) / self.var)
 
@@ -47,7 +47,7 @@ class GaussianFeatures(object):
         else:
             assert x.ndim == 2
         assert np.size(x, axis=1) == np.size(self.mean, axis=1)
-        basis = [np.ones(len(x))] # zero-order bias
+        basis = [np.ones(len(x))]  # zero-order bias
         for m in self.mean:
             basis.append(self._gauss(x, m))
         return np.asarray(basis).transpose()
