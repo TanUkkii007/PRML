@@ -63,7 +63,7 @@ class BayesianRegressor(Regressor):
         return y
 
 
-class EmpricalBayesRegressor(Regressor):
+class EmpiricalBayesRegressor(Regressor):
 
     def __init__(self, alpha=1.0, beta=1.0):
         self.alpha = alpha
@@ -82,7 +82,7 @@ class EmpricalBayesRegressor(Regressor):
             params = [self.alpha, self.beta]
 
             # (3.81) A = \alpha I + \beta \Phi^\top \Phi
-            w_precision = self.alpha * eye + self.beta * X.T @
+            w_precision = self.alpha * eye + self.beta * X.T @ X
             # (3.84) m_N = \beta A^{-1} \Phi^\top t
             # m_N can be obtained by solving A m_N = \beta \Phi^\top t
             w_mean = self.beta * np.linalg.solve(w_precision, X.T @ t)
