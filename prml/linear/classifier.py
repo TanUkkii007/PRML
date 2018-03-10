@@ -79,3 +79,13 @@ class Classifier(object):
             raise ValueError("dtype of t(target) must be np.int")
         if (t < 0).any():
             raise ValueError("t(target) must only has positive values")
+
+    def _check_binary(self, t):
+        if not isinstance(t, np.ndarray):
+            raise ValueError("t(target) must be np.ndarray")
+        if t.ndim != 1:
+            raise ValueError("t(target) must be one dimensional array")
+        if t.dtype != np.int:
+            raise ValueError("dtype of t(target) must be np.int")
+        if (t < 0).any():
+            raise ValueError("t(target) must only has positive values")
