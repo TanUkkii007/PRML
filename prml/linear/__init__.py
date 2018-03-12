@@ -5,6 +5,7 @@ from prml.linear.linear_regressor import LinearRegressor
 from prml.linear.ridge_regressor import RidgeRegressor
 from prml.linear.least_squares_classifier import LeastSquaresClassifier
 from prml.linear.logistic_regressor import LogisticRegressor
+from prml.linear.softmax_regressor import SoftmaxRegressor
 
 __all__ = [
     "BayesianRegressor",
@@ -13,4 +14,5 @@ __all__ = [
     "LeastSquaresClassifier",
     "LogisticRegressor",
     "RidgeRegressor",
+    "SoftmaxRegressor",
 ]
