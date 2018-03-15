@@ -2,6 +2,7 @@
 
 from prml.linear.bayesian_regressor import BayesianRegressor, EmpiricalBayesRegressor
 from prml.linear.linear_regressor import LinearRegressor
+from prml.linear.linear_discriminant_analyzer import LinearDiscriminantAnalyzer
 from prml.linear.ridge_regressor import RidgeRegressor
 from prml.linear.least_squares_classifier import LeastSquaresClassifier
 from prml.linear.logistic_regressor import LogisticRegressor
@@ -11,6 +12,7 @@ __all__ = [
     "BayesianRegressor",
     "EmpiricalBayesRegressor",
     "LinearRegressor",
+    "LinearDiscriminantAnalyzer",
     "LeastSquaresClassifier",
     "LogisticRegressor",
     "RidgeRegressor",
