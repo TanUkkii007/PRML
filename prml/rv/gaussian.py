@@ -12,7 +12,7 @@ class Gaussian(RandomVariable):
     def __init__(self, mu=None, var=None, tau=None):
         super().__init__()
         self.mu = mu
-        if var is not None
+        if var is not None:
             self.var = var
         elif tau is not None:
             self.tau = tau
